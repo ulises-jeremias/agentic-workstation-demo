@@ -2,16 +2,19 @@
 
 import subprocess
 import sys
+from pathlib import Path
 
-import pytest
+
+HELLO = Path(__file__).resolve().parent / "hello.py"
 
 
-def run_hello(*args: str) -> subprocess.CompletedProcess[str]:
+def run_hello(*args: str, cwd: Path | None = None) -> subprocess.CompletedProcess[str]:
     """Run hello.py with given arguments and return the result."""
     return subprocess.run(
-        [sys.executable, "hello.py", *args],
+        [sys.executable, str(HELLO), *args],
         capture_output=True,
         text=True,
+        cwd=cwd or HELLO.parent,
     )
 
 
@@ -49,3 +52,10 @@ def test_help_output() -> None:
     assert "--name" in result.stdout
     assert "--greeting" in result.stdout
     assert "--help" in result.stdout
+
+
+def test_runs_from_outside_repo(tmp_path: Path) -> None:
+    """The CLI test helper should work when invoked outside the repo root."""
+    result = run_hello("--name", "Alice", cwd=tmp_path)
+    assert result.returncode == 0
+    assert result.stdout.strip() == "Hello, Alice!"
