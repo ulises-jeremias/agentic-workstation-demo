@@ -35,6 +35,8 @@ def main() -> None:
 
     if not args.name.strip():
         parser.error("--name cannot be empty")
+    if not args.greeting.strip():
+        parser.error("--greeting cannot be empty")
 
     print(f"{args.greeting}, {args.name}!")
 

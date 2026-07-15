@@ -45,6 +45,13 @@ def test_empty_name_rejected() -> None:
     assert result.returncode != 0
 
 
+def test_empty_greeting_rejected() -> None:
+    """Empty --greeting should cause an error."""
+    result = run_hello("--greeting", "")
+    assert result.returncode != 0
+    assert "--greeting cannot be empty" in result.stderr
+
+
 def test_help_output() -> None:
     """--help should show usage information."""
     result = run_hello("--help")
