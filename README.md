@@ -9,7 +9,6 @@ This repository demonstrates how agentic-workstation works with a real project:
 - **AGENTS.md** — AI routing table delegating tasks to skills and sub-agents
 - **CLAUDE.md** — Symlink for opencode/Cursor compatibility
 - **hello.py** — A simple CLI tool that grows across multiple PRs
-- **Knowledge base** — Persistent AI memory across sessions (when used with agentic-harness)
 
 ## How to Use
 
@@ -51,7 +50,7 @@ The AI reads AGENTS.md and knows:
 
 Try this sequence with your AI:
 
-1. **Plan**: "Plan adding a --greeting flag to hello.py. Delegate to planner."
+1. **Plan**: "Plan adding a --verbose flag to hello.py. Delegate to planner."
 2. **Implement**: "Implement the plan. Delegate to implementer."
 3. **Review**: "Review the changes. Delegate to code-reviewer."
 4. **PR**: "Push and create a PR. Use github-cli-workflow."
