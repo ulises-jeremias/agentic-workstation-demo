@@ -60,3 +60,11 @@ Try this sequence with your AI:
 - [agentic-workstation](https://github.com/ulises-jeremias/agentic-workstation) — The workstation baseline (L1)
 - [agentic-harness](https://github.com/ulises-jeremias/agentic-harness) — The runtime layer (L2)
 - [Complete Stack Tutorial](https://github.com/ulises-jeremias/agentic-workstation/blob/main/docs/tutorials/COMPLETE_STACK.md)
+
+## 👥 Contributors
+
+<a href="https://github.com/ulises-jeremias/agentic-workstation-demo/contributors">
+  <img src="https://contrib.rocks/image?repo=ulises-jeremias/agentic-workstation-demo"/>
+</a>
+
+Made with [contributors-img](https://contrib.rocks).
