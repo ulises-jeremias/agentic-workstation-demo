@@ -1,6 +1,6 @@
 # agentic-workstation-demo
 
-[![Discord](https://img.shields.io/discord/1527933660764831825?label=Discord&logo=discord&logoColor=white)](https://discord.gg/dwFTsR7fK2)
+[![Discord](https://img.shields.io/discord/1527933660764831825?label=Discord&logo=discord&logoColor=white)](https://discord.gg/bR5VyATgka)
 
 > A demo project showcasing agentic-workstation skills, sub-agents, and AGENTS.md in action.
 
